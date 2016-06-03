@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="report">
+    <head>
+        <title>Opret rapport</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/b4df49aca4.js"></script>
+        <script src="report.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:700,900" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="four columns">
+                        <a href="/eksamen" class="logo"><i class="fa fa-home" aria-hidden="true"></i> EAAA Rapporter</a>
+                    </div>
+                    <div class="four columns">
+                        <a href="index.html" class="active"><i class="fa fa-plus" aria-hidden="true"></i> Opret rapport</a>
+                    </div>
+                    <div class="four columns">
+                        <a href="admin.html"><i class="fa fa-list" aria-hidden="true"></i> Administrer</a>
+                    </div>
+                </div>
+            </header>
+            <h1>Opret rapport</h1>
+            <form>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="issue">Problem</label>
+                        <select class="u-full-width" id="issue">
+                            <option value="Reparation">Reparation</option>
+                            <option value="Udskiftning">Udskiftning</option>
+                            <option value="Rengøring">Rengøring</option>
+                        </select>
+                    </div>
+                    <div class="six columns">
+                        <label for="importance">Vigtighed</label>
+                        <select class="u-full-width" id="importance">
+                            <option value="Vigtig">Vigtig</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Nårsomhelst">Nårsomhelst</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="location">Hvor</label>
+                        <input class="u-full-width" type="text" id="location" placeholder="SH-A1.19B" required="required" autocomplete="off"/>
+                    </div>
+                    <div class="six columns">
+                        <label for="date">Dato</label>
+                        <span class="u-full-width" id="date"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <label for="description">Beskrivelse</label>
+                        <textarea class="u-full-width" id="description" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="add" class="button-primary" disabled><i class="fa fa-plus"></i> Tilføj</button>
+                <div id="output">
+                    <h3>Rapport oprettet</h3>
+                    <div class="row">
+                        <div class="one column">
+                            <label>Problem:</label>
+                            <label>Vigtighed:</label>
+                            <label>Lokation:</label>
+                            <label>Dato:</label>
+                            <label>Beskrivelse:</label>
+                        </div>
+                        <div class="ten columns output"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

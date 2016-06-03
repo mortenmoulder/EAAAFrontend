@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="report">
+    <head>
+        <title>Administrer</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/b4df49aca4.js"></script>
+        <script src="report.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:700,900" rel="stylesheet" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="four columns">
+                        <a href="/eksamen" class="logo"><i class="fa fa-home" aria-hidden="true"></i> EAAA Rapporter</a>
+                    </div>
+                    <div class="four columns">
+                        <a href="index.html"><i class="fa fa-plus" aria-hidden="true"></i> Opret rapport</a>
+                    </div>
+                    <div class="four columns">
+                        <a href="admin.html" class="active"><i class="fa fa-list" aria-hidden="true"></i> Administrer</a>
+                    </div>
+                </div>
+            </header>
+            <h1>Administrer</h1>
+            <div class="row">
+                <label for="search">Søg</label>
+                <label id="search-label">
+                    <input type="text" id="search" placeholder="Søg" class="u-full-width" autocomplete="off" />
+                </label>
+            </div>
+            <div class="row">
+                <div class="six columns">
+                    <label>Problem</label>
+                    <label>
+                        <input type="checkbox" class="chk_issue" value="Reparation" />
+                        <span class="label-body">Reparation</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="chk_issue" value="Udskiftning" />
+                        <span class="label-body">Udskiftning</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="chk_issue" value="Rengøring" />
+                        <span class="label-body">Rengøring</span>
+                    </label>
+                </div>
+                <div class="six columns">
+                    <label>Vigtighed</label>
+                    <label>
+                        <input type="checkbox" class="chk_importance" value="Vigtig" />
+                        <span class="label-body">Vigtig</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="chk_importance" value="Normal" />
+                        <span class="label-body">Normal</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" class="chk_importance" value="Nårsomhelst" />
+                        <span class="label-body">Nårsomhelst</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <table id="reports" class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Vigtighed</th>
+                            <th>Lokation</th>
+                            <th>Beskrivelse</th>
+                            <th>Tidspunkt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+              </div>
+            </div>
+            <button type="button" id="remove" class="button-primary" disabled><i class="fa fa-trash" aria-hidden="true"></i> Fjern</button>
+            <button type="button" id="clearLocalStorage" class="button-primary" disabled><i class="fa fa-times" aria-hidden="true"></i> Clear LocalStorage</button>
+        </div>
+    </body>
+</html>
